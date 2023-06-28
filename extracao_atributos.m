@@ -2,7 +2,7 @@
 % Para Y(i,j), i deve ser o sinal no tempo e j os canais do EEG
 % Fs - frequencia de amostragem
 % janela - tamanho da janela em s
-% superposicao - Superposição da janela
+% superposicao - Superposiï¿½ï¿½o da janela
 % n_canais - numeros de canais do sinal 
 
 function [atributos_janela] = extracao_atributos (Y, Fs, janela, superposicao, n_canais)
@@ -11,10 +11,10 @@ function [atributos_janela] = extracao_atributos (Y, Fs, janela, superposicao, n
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% "JANELAMENTO" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-    jan_tot =round(janela/(1/Fs));                % número de pontos de uma janela
-    superpos = round(superposicao/(1/Fs));        % número de pontos da superposição
+    jan_tot =round(janela/(1/Fs));                % nï¿½mero de pontos de uma janela
+    superpos = round(superposicao/(1/Fs));        % nï¿½mero de pontos da superposiï¿½ï¿½o
     step = jan_tot-superpos;                      % step
-    num_janelas = floor(((size(Y,1)-jan_tot)/step)+1);  % número total de janelas
+    num_janelas = floor(((size(Y,1)-jan_tot)/step)+1);  % nï¿½mero total de janelas
     
     % Varrer todo sinal e janelar    
     for h = 0:(num_janelas-1)

@@ -25,18 +25,19 @@
     pkg load signal
     
 % Carregar os sinais salvos em uma pasta
-    %myFolder = '/home/mavi/Documentos/Projects/Extração_atributos_método_1/ASD_FINAL/'; %pasta com sinais
-    myFolder = '/home/mavi/Documentos/Projects/Extração_atributos_método_1/P_FINAL/'; %pasta com sinais
+    %myFolder = '/home/mavi/Documentos/Projects/attribute-extraction/ASD_FINAL/'; %pasta com sinais
+    myFolder = '/home/mavi/Documentos/Projects/attribute-extraction/P_FINAL/'; %pasta com sinais
     addpath(myFolder)
     files = dir(myFolder); %files contem os nomes dos arquivos que estao na pasta
-    pathSave = '/home/mavi/Documentos/Projects/Extração_atributos_método_1/'; %pasta para salvar arff
+    pathSave = '/home/mavi/Documentos/Projects/attribute-extraction/'; %pasta para salvar arff
 
 % Parametros iniciais 
     Fs = 512;            % Frequencia de amostragem em Hz
     janela=2;           % Tamanho da janela em segundos
     superposicao=0.5;      % Superposicao da janela em segundos
     n_canais = 64;       % Numero de canais (eletrodos)
-    classes = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ]; 
+    %classes = [0]; 
+    classes = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ];
     %classes = [0 0 1 1];     % A ordem das classes deve corresponder � ordem dos arquivos salvos em files
     atributos_total =[]; % Criacao de vetores
     vetor_classes =[];
