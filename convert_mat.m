@@ -1,14 +1,14 @@
-  % Carregar pacotes do Octave
+  % Carrega pacotes do Octave
     pkg load io
 
-  % Carregar os sinais salvos em uma pasta
-    myFolder = '/home/mavi/Documentos/Projects/Extração_atributos_método_1/versao_final/'; 
+  % Carrega os sinais salvos em uma pasta
+    myFolder = ' '; %pasta com os arquivos .csv 
     addpath(myFolder)
     files = dir(myFolder);
 
-    pathSave = '/home/mavi/Documentos/Projects/Extração_atributos_método_1/Sinal_mat/'; %pasta para salvar arff
+    pathSave = ' '; %pasta onde os arquivos .mat serão salvos
   
-  %Lendo os arquivos e transformando para .m
+  %Lendo os arquivos e transformando para .mat
     for i = 3:length(files)
       
     fullFileName = [files(i).folder, '/', files(i).name]
